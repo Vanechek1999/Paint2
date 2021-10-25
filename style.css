@@ -1,0 +1,150 @@
+@font-face {
+    font-family: 'MuseoModerno';
+    src: url('./fonst/MuseoModerno.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+body{
+    font-family: 'MuseoModerno', sans-serif;
+    margin: 0;
+    overflow: hidden;
+    position: relative;
+    cursor: none;
+}
+*{
+    padding: 0;
+    margin: 0;
+    outline: none;
+}
+.cursor{
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    background: #000;
+    position: absolute;
+    display: none;
+    cursor: none;
+}
+canvas{
+    z-index: 20;
+    position: relative;
+}
+.option{
+    z-index: 30;
+    position: absolute;
+}
+.option{
+    margin-bottom: 20px;
+    cursor: default;
+}
+.option .colors,
+.option .size,
+.option .imgOpacity{
+    margin-bottom: 20px;
+}
+
+.colors{
+    display: flex;
+    top: 0;
+    left: 0;
+    justify-content: space-between;
+}
+
+.changeColor{
+    width: 30%;
+    padding: 0;
+    border: none;
+    border-color: transparent;
+    color: transparent;
+    box-shadow: none;
+    background: transparent;
+}
+input{
+    cursor: pointer;
+}
+.size{
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.changeSize, .changeOpacity{
+    width: 30%;
+    -moz-appearance: textfield;
+	-webkit-appearance: textfield;
+	appearance: textfield;
+    transition: box-shadow .5s ease-in-out;
+    border: 1px solid rgb(0 0 0 / 30%);
+}
+.changeSize::-webkit-outer-spin-button,
+.changeSize::-webkit-inner-spin-button,
+.changeOpacity::-webkit-outer-spin-button,
+.changeOpacity::-webkit-inner-spin-button {
+	display: none;
+}
+.changeSize:focus-visible, .changeOpacity:focus-visible{
+    box-shadow: 0px 3px 10px rgb(0 0 0 / 30%);
+    transition: box-shadow .5s ease-in-out;
+    border: 1px solid rgb(0 0 0 / 30%);
+}
+
+.imgOpacity{
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.download{
+    position: relative;
+    right: 0;
+    z-index: 30;
+}
+
+
+.downloadNewImg{
+    position: relative;
+    width: -webkit-fill-available;
+    border: 1px dashed rgba(0, 0, 0, 0.5);
+    border-radius: 24px;
+}
+.download_text {
+    padding: 5px 96px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 22px
+}
+.downLoadImg{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    opacity: 0;
+    overflow: hidden;
+}
+
+
+
+
+.newImg{
+    z-index: 1;
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-height: 70%;
+}
+.black{
+    background: black;
+}
+.red{
+background: red;
+}
+.green{
+    background: green;
+}
+.purple{
+    background: purple;
+}
+

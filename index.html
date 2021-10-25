@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Canvas</title>
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="option">
+        <div class="colors">
+            <!-- Выбирите цвет пера -->
+            <span>Change Color</span>
+            <input class="changeColor" type="color">
+        </div>
+        <div class="size">
+            <span>Change Size of feather</span>
+            <input class="changeSize" value="1" type="number">
+        </div>
+        <div class="imgOpacity">
+            <span>Change image transparency</span>
+            <input class="changeOpacity"  step="0.1" value="1" type="number">
+        </div>
+        <div class="download">
+            <div class="downloadNewImg">
+                <div class="download_text">Загрузите картинку</div>
+                <input class="downLoadImg" type="file">
+            </div>
+        </div>
+    </div>
+    
+    <img class="newImg" src="" alt="">
+    <canvas id="canvas"></canvas>
+    <script src="./main.js"></script>
+</body>
+</html>
